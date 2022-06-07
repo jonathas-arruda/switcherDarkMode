@@ -64,15 +64,6 @@ const listaFelinos = [
                 Índia.`,
     imgURL: "./imagens/leon.jpg",
   },
-  {
-    titulo: "O leopardo",
-    descricao: `O leopardo (Panthera pardus) é um mamífero carnívoro da família dos felinos. Como três dos outros
-                felinos do gênero Panthera: o leão, o tigre e a onça-pintada, são caracterizados por uma modificação do osso
-                hióide que lhes permite rugir.
-                É também conhecido como pantera marrom e, quando tem a pelagem completamente escura, como pantera negra
-                (melanista).`,
-    imgURL: "./imagens/leopardo.jpg",
-  },
 ];
 
 export default listaFelinos ;

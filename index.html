@@ -9,18 +9,36 @@
   <script type="module" src="index.js" defer></script>
   <title>Dark Mode</title>
 </head>
+
 <body>
-<header class="container-header">
-  <h1>A família dos felinos</h1>
-  <label class="switch">
-    <input type="checkbox" class="slider round" onclick="darkmode()"></input>
-    <span class="slider round"></span>
-  </label>
-</header>
+  <header class="container-header">
+    <h1>A família dos felinos</h1>
+    <label class="switch">
+      <input type="checkbox" class="slider round" onclick="darkmode()"></input>
+      <span class="slider round"></span>
+    </label>
+  </header>
 
-  <div class="container" id="elementoPai">
-
+  <form class="formulario" >
+    <div class="container-form item">
+      <div>
+        <label for=""><h2>Titulo</h2></label>
+        <input class="input-form" type="text">
+      </div>
+      <div>
+        <label for=""><h2>Descrição</h2></label>
+        <textarea class="input-form" name="" id="" cols="30" rows="5"></textarea>
+      </div>
+      <div>
+        <label for=""><h2>imagem</h2></label>
+        <input class="input-form" type="text">
+      </div>
+      <div class="btn">
+        <button class="register-btn" type="button"><h2>postar</h2></button>
+      </div>
+  </form>
   </div>
+  <div class="container" id="elementoPai"></div>
 </body>
 
 </html>

@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
 
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 body {
@@ -14,7 +14,7 @@ h1 {
   color: grey;
 }
 
-.container-header{
+.container-header {
   height: 60px;
   background-color: white;
   border-bottom: 1px solid lightgrey;
@@ -47,7 +47,7 @@ h1 {
 
 .item h2 {
   font-size: 1em;
-  margin-bottom: .2em;
+  margin-bottom: 0.2em;
 }
 
 /* button design */
@@ -58,7 +58,7 @@ h1 {
   height: 34px;
 }
 
-.switch input { 
+.switch input {
   opacity: 0;
   width: 0;
   height: 0;
@@ -72,8 +72,8 @@ h1 {
   right: 0;
   bottom: 0;
   background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .slider:before {
@@ -84,8 +84,8 @@ h1 {
   left: 4px;
   bottom: 4px;
   background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 input:checked + .slider {
@@ -98,7 +98,6 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-/* Rounded sliders */
 .slider.round {
   border-radius: 34px;
 }
@@ -107,32 +106,77 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-/* ------------------------------ Estilos para o tema escuro (Dark-Mode) ----------------------------------------------- */ 
+.formulario {
+  height: 20rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
 
-/* Os seguintes estilos são os que usaremos para aplicar o modo escuro, 
-você terá que modificar os seletores a fim de poder resolver o exercício. */
+.container-form {
+  height: 100%;
+  width: 80%;
+  justify-content: center;
+}
+.btn {
+  display: flex;
+  justify-content: end;
+}
+.register-btn {
+  height: 2.5rem;
+  width: 20rem;
+  margin: 10px 0;
+  border: 0;
+  border-radius: 10px;
+  background-color: rgb(238, 238, 238);
+}
 
-/* A cor de fundo  */
+.register-btn:hover {
+  background-color: rgb(223, 223, 223);
+}
+.register-btn:active {
+  background-color: rgb(238, 238, 238);
+}
 
-.dark  {
+.input-form {
+  width: 100%;
+  border-radius: 5px;
+  border: solid 1px rgb(170, 170, 170);
+
+}
+
+.dark {
   background-color: rgb(39, 39, 39);
 }
 
- /* Modificações no titulo 'A família dos felinos' */
- .dark .container-header { 
+.dark .container-header {
   background-color: rgb(19, 19, 19);
   color: rgb(170, 170, 170);
   border-color: black;
 }
 
-
-/* Modificações nos items */
-.dark .item{
+.dark .item {
   background-color: rgb(19, 19, 19);
   border-color: black;
 }
 
- /* Modificações nos textos dos itens e cabeçalhos dos itens */
-.dark  h2 ,.dark p{
+.dark h2,.dark p {
   color: rgb(230, 230, 230);
+}
+
+.dark .register-btn { 
+  background-color: rgb(80, 80, 80);
+}
+
+.dark .register-btn:hover {
+  background-color: rgb(95, 95, 95);
+}
+.dark .register-btn:active {
+  background-color: rgb(80, 80, 80);
+}
+
+.dark .input-form {
+  background-color: rgb(95, 95, 95);
+  border: 0;
 }
