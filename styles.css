@@ -13,7 +13,9 @@ body {
 h1 {
   color: grey;
 }
-
+p{
+  font-size: 14px;
+}
 .container-header {
   height: 60px;
   background-color: white;
@@ -23,20 +25,30 @@ h1 {
   align-items: center;
   padding: 0 10%;
 }
-.container {
+.container{
+  height: 100%;
+  width: 100%;
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px 0;
+
+}
+.cont{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 20rem );
   justify-content: space-between;
+  gap: 20px;
   width: 80%;
-  margin: 2em 10%;
+  justify-content: center;
+
+  justify-items: center;
 }
 
 .item {
-  width: 30em;
+  width: 20rem;
   background-color: white;
   box-sizing: border-box;
-  padding: 1.5em;
-  margin-bottom: 1em;
+  padding: 1rem;
   border-radius: 5px;
   border: 1px solid lightgray;
 }
@@ -116,7 +128,7 @@ input:checked + .slider:before {
 
 .container-form {
   height: 100%;
-  width: 40%;
+  width: 60%;
   justify-content: left;
 }
 .btn {

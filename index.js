@@ -1,9 +1,3 @@
- import listaFelinos from "./db.js";
-
-window.onload = function () {
-  percorreListaFelinos();
-};
-
 window.darkmode = darkmode;
 
 function darkmode() {
@@ -11,19 +5,10 @@ function darkmode() {
   element.classList.toggle("dark");
 }
 
+let cards = [];
+
 let elementoPai = document.getElementById("elementoPai");
 
-function percorreListaFelinos() {
-  listaFelinos.map((felino) => {
-    let card = `<img src="${felino.imgUrl}">
-                  <h2>${felino.title}</h2>
-                  <p>${felino.description}</p>`;
-    let novaDiv = document.createElement("div");
-    novaDiv.className = "item";
-    novaDiv.innerHTML = card;
-    elementoPai.appendChild(novaDiv);
-  });
-}
 //POSTAGEM
 let Post = {
   title: "",
@@ -35,22 +20,25 @@ let submit = document.getElementById("submit");
 
 //TESTE CONSOLE
 let verPost = () => console.log(Post);
-let verFelinosAtual = () => console.log(listaFelinos);
+let verFelinosAtual = () => console.log(cards);
 
 //RENDERIZA ULTIMA OBJETO/POSTAGEM DO ARRAY
 
 let lastPost = () => {
-  let lastPostNumber = listaFelinos.length -1
-  
-    let card = `<img src="${listaFelinos[lastPostNumber].imgUrl}">
-                  <h2>${listaFelinos[lastPostNumber].title}</h2>
-                  <p>${listaFelinos[lastPostNumber].description}</p>`;
-    let novaDiv = document.createElement("div");
-    novaDiv.className = "item";
-    novaDiv.innerHTML = card;
-    let firstChild = elementoPai.firstChild ;
-    elementoPai.insertBefore(novaDiv,firstChild)
-  };
+  let lastPostNumber = cards.length - 1;
+
+  let card = `<img src="${cards[lastPostNumber].imgUrl}">
+                  <h2>${cards[lastPostNumber].title}</h2>
+                  <p>${cards[lastPostNumber].description}</p>`;
+  let novaDiv = document.createElement("div");
+  novaDiv.className = "item";
+  novaDiv.innerHTML = card;
+  let firstChild = elementoPai.firstChild;
+  elementoPai.insertBefore(novaDiv, firstChild);
+  novaDiv.addEventListener("click", () => {
+    novaDiv.remove();
+  });
+};
 
 submit.addEventListener("click", (e) => {
   e.preventDefault();
@@ -59,7 +47,7 @@ submit.addEventListener("click", (e) => {
   Post.description = document.getElementById("GET-description").value;
   Post.imgUrl = document.getElementById("GET-imageUrl").value;
 
-  listaFelinos.push(Post);
+  cards.push(Post);
   verPost();
   verFelinosAtual();
   lastPost();
